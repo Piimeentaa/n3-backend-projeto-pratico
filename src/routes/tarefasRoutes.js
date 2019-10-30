@@ -3,9 +3,11 @@ const router = express.Router()
 const controller = require("../controllers/tarefasController")
 
 router.get("/", controller.get)
-router.get("/concluido", controller.getByConcluido)
-router.get("/:id", controller.getById)
+router.get("/ba", controller.getConcluido)
+router.get("/buscaid/:id", controller.getById)
+router.get("/find/:nome", controller.getByNome)
 
-// router.get("/tarefas", controller.getNome)
+
+
 
 module.exports = router
