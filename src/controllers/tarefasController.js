@@ -12,10 +12,15 @@ exports.getById = (req, res) => {
     res.status(200).send(task)
  }
 exports.getByConcluido = (req, res) => {
-    const status = tarefas.find(taks => status.concluido == true)
-            
-    res.status(200).send(status)
-    }
+
+    const final = tarefas.filter((item) => {
+        
+        return item.concluido === "true";
+
+    })  
+
+    res.status(200).send(final)
+}
 
 
     
