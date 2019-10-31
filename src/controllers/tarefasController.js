@@ -26,6 +26,13 @@ exports.getByNome = (req, res) => {
     
     res.status(200).send(nomeBusca)
  }
+//  exports.getByInclusao = (req, res) =>{
+//     const separar = tarefas.dataInclusao.splip(/)
+
+//     res.status(200).send(porData)
+
+// }
+
 
 
     
