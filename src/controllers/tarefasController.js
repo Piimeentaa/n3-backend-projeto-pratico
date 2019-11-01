@@ -26,16 +26,30 @@ exports.getByNome = (req, res) => {
     
     res.status(200).send(nomeBusca)
  }
-//  exports.getByInclusao = (req, res) =>{
-//     const separar = tarefas.dataInclusao.splip(/)
-
-//     res.status(200).send(porData)
-
-// }
-
-
-
-    
-
-    
    
+ exports.getByTempo = (req, res) =>{
+
+    const inclusao1 = tarefas.dataInclusao.split('/')
+    const day1 = inclusao[0];
+    const month1 = inclusao[1];
+    const year1 = inclusao[2];
+    const dataNova1 = new Date(year1, month1 - 1, day1);
+
+    console.log(dataNova1)
+    
+    const inclusao2 = tarefas.dataInclusao.split('/')
+    const day2 = inclusao2[0];
+    const month2 = inclusao2[1];
+    const year2 = inclusao2[2];
+    const dataNova2 = new Date(year2, month2 - 1, day2);
+
+    console.log(dataNova2)
+    
+    function ordemCresc (a,b) {
+        return a.dataNova1 > b.dataNova2;
+    }
+    const ordenar = listarTarefas.sort(ordemCresc)
+
+    res.status(200).send(ordenar)
+   
+ }
