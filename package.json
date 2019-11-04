@@ -1,0 +1,23 @@
+{
+  "name": "n3-backend-projeto-pratico",
+  "version": "1.0.0",
+  "description": "Projeto mão na massa de MVC",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Piimeentaa/n3-backend-projeto-pratico.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Piimeentaa/n3-backend-projeto-pratico/issues"
+  },
+  "homepage": "https://github.com/Piimeentaa/n3-backend-projeto-pratico#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

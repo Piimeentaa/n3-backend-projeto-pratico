@@ -10,6 +10,7 @@ exports.getById = (req, res) => {
     const id = req.params.id
     const task = tarefas.find(task => task.id == id)
 
+
     res.status(200).send(task)
 }
 
@@ -19,6 +20,16 @@ exports.getConcluido = (req, res) => {
         return conc;
     // const conc = tarefas.filter((item) => {
     //     return item.concluido === "true";
+
+    res.status(200).send(task)
+}
+
+exports.getConcluido = (req, res) => {
+
+    const conc = tarefas.filter((item) => {
+        return item.concluido === "true";
+    })
+
     res.status(200).send(conc)
 
 }   
@@ -32,6 +43,7 @@ exports.getByNome = (req, res) => {
 exports.getByTempo = (req, res) => {
 
     /*const inclusaoA = tarefas.dataInclusao
+<<<<<<< HEAD
 
     const dataNova1 = new Date(inclusaoA);
     const dataNova2 = new Date(inclusaoA[0], inclusaoA[1] - 1, inclusaoA[2]);
@@ -48,6 +60,19 @@ exports.getByTempo = (req, res) => {
         return dataA - dataB.sort()
 
          res.status(200).send(ordenar)
+=======
+
+    const dataNova1 = new Date(inclusaoA);
+    const dataNova2 = new Date(inclusaoA[0], inclusaoA[1] - 1, inclusaoA[2]);
+
+    console.log(dataNova1)
+    console.log(dataNova2)
+
+    function ordemCresc(a, b) {
+        var dataA = new Date(a.dataInclusao);
+        var dataB = new Date(b.dataInclusao);
+        return dataA - dataB
+>>>>>>> 15581dee5231a9dade142a41b42265be04588352
     }*/
 
     const ordenar = tarefas.sort((a,b) => {
